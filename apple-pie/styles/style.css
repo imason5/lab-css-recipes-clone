@@ -5,14 +5,27 @@ html {
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: lighter;
+  letter-spacing: 1px;
+  line-height: 1;
 }
 
 /*  Set the font */
@@ -22,3 +35,90 @@ body {
 
 /* STYLES */
 /* Write your CSS below */
+
+/* GENERAL */
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 100;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+li {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 5px;
+  margin-left: 1rem;
+}
+
+/* HEADER */
+
+.header {
+  background-image: url("../images/apple-pie.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.header h1 {
+  color: white;
+  font-size: 5rem;
+}
+
+/* HERO */
+
+.section-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 0rem;
+  border-bottom: 2px solid #555;
+  margin: 0 10rem;
+}
+
+.section-hero h2 {
+  font-size: 1.8rem;
+  color: #555;
+}
+
+.hero-calories {
+  margin-top: 5rem;
+}
+
+/* INGREDIENTS SECTION */
+
+.section-ingredients {
+  padding: 4rem 0rem;
+  border-bottom: 2px solid #555;
+  margin: 0 10rem;
+}
+
+.cooking-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+/* DIRECTION SECTION */
+
+.section-directions {
+  padding: 4rem 0rem;
+  margin: 0 10rem;
+  counter-reset: item;
+}
+
+.section-directions li::before {
+  content: counter(item) ") ";
+  counter-increment: item;
+}
